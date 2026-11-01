@@ -5,3 +5,12 @@ description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.14"
 dependencies = []
+
+[tool.uv.workspace]
+members = [
+    "hw/lect/hw1",
+    "hw/lect/hw2",
+    "hw/pract/hw1",
+    "hw/pract/hw2",
+    "hw/pract/hw3",
+]

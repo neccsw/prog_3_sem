@@ -1,0 +1,10 @@
+[project]
+name = "pract-hw1"
+version = "0.1.0"
+description = "Add your description here"
+requires-python = ">=3.14"
+dependencies = [
+    "colorama>=0.4.6",
+    "ipykernel>=7.4.0",
+    "requests>=2.32.5",
+]
