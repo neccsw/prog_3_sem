@@ -3,7 +3,7 @@ import handler
 from .reader import reader
 
 def main():
-    file_path = Path(__file__).resolve().parents[2] / "data" / "text55.txt"
+    file_path = Path(__file__).resolve().parents[3] / "data" / "text55.txt"
 
     try:
         text = reader.read_file(file_path)
