@@ -1,0 +1,3 @@
+[submodule "hw/lect/hw2/src/credential_security_project"]
+	path = hw/lect/hw2/src/credential_security_project
+	url = https://github.com/neccsw/Credential-security-project.git
