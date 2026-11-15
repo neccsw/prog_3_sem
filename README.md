@@ -175,3 +175,41 @@ Guess whether the next number will be higher or lower. Enter `higher` or `lower`
 ```bash
 uv run --locked --package pract-hw3 --directory hw/pract/hw3/src python -m tasks.task4.main
 ```
+
+## Practical Homework 4
+
+Calculates Word Error Rate using word-level Levenshtein alignment:
+`WER = (S + D + I) / N`. `S` counts substitutions, `D` deletions, `I` insertions,
+and `N` words in the reference text. WER is stored as a ratio and can exceed 1.
+Equally optimal alignments prefer substitutions, then deletions, then insertions.
+
+Reads the bundled UTF-8 files in `hw/pract/hw4/data`: `reference.txt` contains
+user-provided Ukrainian text about compensation for utility costs in 2014.
+It preserves the supplied wording, punctuation, numbers, and paragraph breaks.
+`hypothesis.txt` is a deliberately modified copy for demonstrating all three
+error types. Both contain 200 words after normalization, meeting the
+assignment's minimum of 100 words per text. Numbers are excluded by the tokenizer.
+The sample is historical input data for text comparison.
+No input or internet connection is required to run the program.
+
+Changes in `hypothesis.txt` relative to the reference:
+
+- Substitutions: `різким` → `значним`, `родини` → `сім’ї`.
+- Deletions: `нову` before `адресну`, `сукупний` before `дохід`.
+- Insertions: `особливо` before `складного`, `відповідну` before `заяву`.
+
+```bash
+uv run --locked --package pract-hw4 python hw/pract/hw4/src/main.py
+```
+
+The program prints `WER`, `S`, `D`, `I`, and `N` and writes them to
+`hw/pract/hw4/results.json`. Input and output paths are relative to the script,
+so changing the working directory does not change which files it uses.
+Comparison ignores case and surrounding punctuation, normalizes apostrophes,
+and preserves apostrophes and hyphens within words. An empty reference is an error;
+an empty hypothesis counts every reference word as deleted. Reading or calculation
+errors leave any existing result file unchanged.
+
+The modified copy is a synthetic example, not output from a speech recognition
+system. Generated results and submission screenshots are not included in this
+repository. Run the command above to produce a local `results.json` file.
