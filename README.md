@@ -84,6 +84,32 @@ Uses `random`, `math`, and `datetime` to print a random integer from 1 to 100, i
 uv run --locked --package lect-hw2 --directory hw/lect/hw2/src python -m tasks.task3.main
 ```
 
+## Lecture Homework 3
+
+Analyzes an English or Ukrainian UTF-8 text file using NLTK and pandas. Install the workspace dependencies, including pytest, into the shared `.venv`:
+
+```bash
+uv sync --all-packages --all-groups --locked
+```
+
+The bundled [text.txt](hw/lect/hw3/data/text.txt) contains 294 words, approximately one A4 page. Replace its contents with your own text to analyze it. Text length is not restricted. To use another file, change `file_path` in [main.py](hw/lect/hw3/src/main.py).
+
+Run from the repository root:
+
+```bash
+uv run --locked --package lect-hw3 python hw/lect/hw3/src/main.py
+```
+
+The program prints the total word count and every word's occurrence count, sorted by decreasing count and then by word. It ignores case, numbers, and punctuation, normalizes apostrophes, and keeps internal apostrophes and hyphens. Different word forms are counted separately, and common words are included. Empty text, text without words, and file reading errors produce informative messages. No NLTK corpus or model downloads are needed. The input path is relative to the script, so changing the working directory does not change which file is analyzed.
+
+Run the automated tests (they use temporary files and do not require your input text):
+
+```bash
+uv run --locked --package lect-hw3 --all-groups python -m pytest -c hw/lect/hw3/pyproject.toml
+```
+
+The [NLTK and pandas comparison](https://docs.google.com/spreadsheets/d/11-nCIKmy2ZN1h6lMNARwXAmz1QyFH1wkFemHb9kohOk/edit) is a Google Sheet in Ukrainian with six comparison parameters and examples from the code.
+
 ## Practical Homework 1
 
 An interactive Wordle game in [main.ipynb](hw/pract/hw1/main.ipynb).

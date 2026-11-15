@@ -10,6 +10,7 @@ dependencies = []
 members = [
     "hw/lect/hw1",
     "hw/lect/hw2",
+    "hw/lect/hw3",
     "hw/pract/hw1",
     "hw/pract/hw2",
     "hw/pract/hw3",

@@ -1,0 +1,18 @@
+[project]
+name = "lect-hw3"
+version = "0.1.0"
+description = "Text analysis with NLTK and pandas"
+requires-python = ">=3.14"
+dependencies = [
+    "nltk",
+    "pandas",
+]
+
+[dependency-groups]
+dev = [
+    "pytest",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
