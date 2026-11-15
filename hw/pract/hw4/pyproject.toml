@@ -1,0 +1,15 @@
+[project]
+name = "pract-hw4"
+version = "0.1.0"
+description = "Word error rate calculation"
+requires-python = ">=3.14"
+dependencies = []
+
+[dependency-groups]
+dev = [
+    "pytest",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]

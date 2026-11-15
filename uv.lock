@@ -15,6 +15,7 @@ members = [
     "pract-hw1",
     "pract-hw2",
     "pract-hw3",
+    "pract-hw4",
     "prog-3-sem",
 ]
 
@@ -643,6 +644,21 @@ source = { virtual = "hw/pract/hw2" }
 name = "pract-hw3"
 version = "0.1.0"
 source = { virtual = "hw/pract/hw3" }
+
+[[package]]
+name = "pract-hw4"
+version = "0.1.0"
+source = { virtual = "hw/pract/hw4" }
+
+[package.dev-dependencies]
+dev = [
+    { name = "pytest" },
+]
+
+[package.metadata]
+
+[package.metadata.requires-dev]
+dev = [{ name = "pytest" }]
 
 [[package]]
 name = "prog-3-sem"
