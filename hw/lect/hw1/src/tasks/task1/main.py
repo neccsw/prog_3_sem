@@ -1,4 +1,4 @@
-from .analyzer import analyzer
+from . import analyzer
 from handler import EmptyTextError
 
 def main():
