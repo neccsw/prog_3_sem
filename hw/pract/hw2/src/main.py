@@ -1,6 +1,6 @@
 from pathlib import Path
 
-from analyzer import analyzer
+import analyzer
 
 
 def main():
